@@ -25,12 +25,12 @@ public class VeiculoController {
         return veiculoService.listar();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/veiculos/{id}")
     public Veiculo buscarPorId(@PathVariable Long id) {
         return veiculoService.buscarPorId(id);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/veiculos/{id}")
     public void deletarPorId(@PathVariable Long id) {
         veiculoService.deletarPorId(id);
     }

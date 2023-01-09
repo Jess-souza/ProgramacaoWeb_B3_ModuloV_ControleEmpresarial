@@ -13,7 +13,7 @@ public class Despesa {
     private String categoria;
     @Column(unique = true)
     private String numeroNf;
-    private String valorNf;
+    private Double valorNf;
     private LocalDate dataVencimento;
     private boolean pago;
 
@@ -49,11 +49,11 @@ public class Despesa {
         this.numeroNf = numeroNf;
     }
 
-    public String getValorNf() {
+    public Double getValorNf() {
         return valorNf;
     }
 
-    public void setValorNf(String valorNf) {
+    public void setValorNf(Double valorNf) {
         this.valorNf = valorNf;
     }
 

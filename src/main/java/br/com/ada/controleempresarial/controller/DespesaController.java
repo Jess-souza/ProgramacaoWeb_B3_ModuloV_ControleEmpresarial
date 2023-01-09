@@ -25,12 +25,12 @@ public class DespesaController {
         return despesaService.listar();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/despesas/{id}")
     public Despesa buscarPorId(@PathVariable Long id) {
         return despesaService.buscarPorId(id);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/despesas/{id}")
     public void deletarPorId(@PathVariable Long id) {
         despesaService.deletarPorId(id);
     }

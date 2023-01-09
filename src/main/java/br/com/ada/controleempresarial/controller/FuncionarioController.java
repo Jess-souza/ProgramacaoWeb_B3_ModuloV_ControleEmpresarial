@@ -25,12 +25,12 @@ public class FuncionarioController {
         return funcionarioService.listar();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/funcionarios/{id}")
     public Funcionario buscarPorId(@PathVariable Long id) {
         return funcionarioService.buscarPorId(id);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/funcionarios/{id}")
     public void deletarPorId(@PathVariable Long id) {
         funcionarioService.deletarPorId(id);
     }
