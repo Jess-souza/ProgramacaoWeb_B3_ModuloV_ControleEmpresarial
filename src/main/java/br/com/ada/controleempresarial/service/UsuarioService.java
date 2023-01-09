@@ -3,6 +3,7 @@ package br.com.ada.controleempresarial.service;
 import br.com.ada.controleempresarial.model.Usuario;
 import org.springframework.stereotype.Service;
 import br.com.ada.controleempresarial.repository.UsuarioRepository;
+import java.util.List;
 
 @Service
 public class UsuarioService {
@@ -14,7 +15,18 @@ public class UsuarioService {
     }
 
     public Usuario salvar(Usuario usuario) {
-        // Implementa regras de validações, etc...
         return usuarioRepository.save(usuario);
+    }
+
+    public List<Usuario> listar() {
+        return (List<Usuario>) usuarioRepository.findAll();
+    }
+
+    public Usuario buscarPorId(Long id) {
+        return usuarioRepository.findById(id).orElse(null);
+    }
+
+    public void deletarPorId(long id){
+     usuarioRepository.deleteById(id);
     }
 }
