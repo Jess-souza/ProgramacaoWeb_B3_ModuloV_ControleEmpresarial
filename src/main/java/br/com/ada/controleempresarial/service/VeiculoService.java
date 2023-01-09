@@ -29,4 +29,8 @@ public class VeiculoService {
     public void deletarPorId(long id) {
         veiculoRepository.deleteById(id);
     }
+
+    public Veiculo buscarPorAno(int anoFabricacao) {
+        return veiculoRepository.findById(Long.valueOf(anoFabricacao)).orElse(null);
+    }
 }
